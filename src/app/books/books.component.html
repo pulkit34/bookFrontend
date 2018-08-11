@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p class="para">FinvestFX Book App</p>
+    </div>
+   <div class="col-4 menu">Welcome {{name}}</div>
+   <div class="col-4 menu" [routerLink]="['/favorites']">Favourites</div>
+   <div (click)=logout() class="col-4 menu">Logout</div>
+    <div class="col-12 mt-2">
+      <form>
+        <h5 class="md-1 head">Search For Books:</h5>
+        <input type="text" class="form-control search" name="book" [(ngModel)]="book">
+        <br>
+        <button (click)=search() class="btn">Search</button>
+      </form>
+    </div>
+  </div>
+  <h5 class="mt-3 mb-2  head">SEARCH RESULT:</h5>
+  <div class="row" *ngIf="searchResult">
+    <div class="col-12 mt-2 mb-2 text-left" *ngFor="let search of searchResult">
+      <ul>
+        <li>
+          <div class="book-image">
+            <img class="img-thumbnail" src="{{search.volumeInfo.imageLinks.thumbnail}}">
+          </div>
+          <div class="book-details mt-2">
+            Title : {{search.volumeInfo.title}}
+            <br> Authors : {{search.volumeInfo.authors}}
+            <br> Publisher : {{search.volumeInfo.publisher}}
+            <br>
+            <button class="btn mt-2" [routerLink]="['/single-book',search.id]">View</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ngx-spinner>
+  <p style="font-size: 16px; color:white">Searching...</p>
+</ngx-spinner>

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p class="para">FinvestFX Book App</p>
+            </div>
+            <div class="col-12">
+            <p class="para2">Don't Have An Account?</p>
+            <span class="para3" [routerLink]="['/signup']">Click To Sign-Up</span>
+            <br>
+            <br>
+            <h4 class="text-center">Login Here!</h4>
+            <form>
+                <label for="email">Enter Your Email:</label>
+                <br>
+                <input type="email" class="form-control" name="email" [(ngModel)]="email" required>
+                <br>
+                <label for="password">Enter Your Password:</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password" required>
+                <br>
+                <button (click)=login() class="btn btn-primary text-white">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

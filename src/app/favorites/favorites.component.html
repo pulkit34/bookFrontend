@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="para">All Favorites!</p>
+        </div>
+    </div>
+    <div class="row text-left mt-3" *ngIf=allBooks>
+        <div *ngFor="let book of allBooks" class=col-md-12>
+            <ul>
+                <li>
+                    <div class="book-image">
+                        <img class="img-thumbnail" src="{{book.volumeInfo.imageLinks.thumbnail}}">
+                    </div>
+                    <div class="book-details mt-2">
+                        Title : {{book.volumeInfo.title}}
+                        <br> Authors : {{book.volumeInfo.authors}}
+                        <br> Publisher : {{book.volumeInfo.publisher}}
+                        <br>
+                        <button class="btn mt-2" [routerLink]="['/single-book',book.id]">View</button>
+                        <br>
+                        <button class="btn btn-danger mt-2" (click)=remove(book.id)>Remove</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

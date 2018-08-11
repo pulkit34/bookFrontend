@@ -1,0 +1,50 @@
+<div class="container">
+  <nav class="nav navbar-light bg-light">
+    <a class="navbar-brand nav-part1">
+      FinvestFX
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link nav-part2" [routerLink]="['/login']">
+          Login
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <br>
+  <br>
+  <h4 class="text-center">Sign Up Here!</h4>
+  <br>
+  <form>
+    <label for="firstName">Enter First Name:
+    </label>
+    <br>
+    <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control" required>
+    <br>
+
+    <label for="lastName">Enter Last Name:
+    </label>
+    <br>
+    <input type="text" name="lastName" [(ngModel)]="lastName" class="form-control" required>
+    <br>
+
+    <label for="email">Enter Email:
+    </label>
+    <br>
+    <input type="email" name="email" [(ngModel)]="email" class="form-control" required>
+    <br>
+
+    <label for="password">Enter Password:
+    </label>
+    <br>
+    <input type="password" name="password" [(ngModel)]="password" class="form-control" required>
+    <br>
+
+    <label for="phone">Enter Phone:
+    </label>
+    <br>
+    <input type="text" name="phone" [(ngModel)]="phone" class="form-control" required>
+    <br>
+    <button (click)=signUp() class="btn btn-primary text-white mb-4">Sign Up</button>
+  </form>
+</div>

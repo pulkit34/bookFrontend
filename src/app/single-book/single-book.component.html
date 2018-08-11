@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row" *ngIf=bookData>
+
+    <div class="col-md-12">
+    
+<h3 class="heading text-center mb-3">{{bookData.volumeInfo.title}}</h3>
+  <button (click)=add(bookData.id,bookData.volumeInfo.title) 
+  class="btn btn-info mt-3 mb-3">
+  Add To Favorites.
+</button>  
+</div>
+    <div class="col-md-6">
+      Authors:
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.authors}}
+    </div>
+
+    <div class="col-md-6">
+      Published Date:
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.publishedDate}}
+    </div>
+
+    <div class="col-md-6">
+      Publisher:
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.publisher}}
+    </div>
+
+    <div class="col-md-6">
+      Page Count:
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.pageCount}}
+    </div>
+
+    <div class="col-md-6">
+      Height:
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.dimensions.height}}
+    </div>
+
+    <div class="col-md-6">
+      Average Rating :
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.averageRating}}
+    </div>
+
+    <div class="col-md-6">
+      Categories :
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.categories}}
+    </div>
+
+    <div class="col-md-6">
+      Description :
+    </div>
+    <div class="col-md-6" [innerHTML]=bookData.volumeInfo.description>
+    </div>
+
+    <div class="col-md-6">
+      Language :
+    </div>
+    <div class="col-md-6">
+      {{bookData.volumeInfo.language}}
+    </div>
+
+    <div class="col-md-6">
+      Country :
+    </div>
+    <div class="col-md-6">
+      {{bookData.saleInfo.country}}
+    </div>
+
+    <div class="col-md-6">
+      List Price :
+    </div>
+    <div class="col-md-6">
+      {{bookData.saleInfo.listPrice.amount}}
+    </div>
+
+    <div class="col-md-6">
+      Currency Code :
+    </div>
+    <div class="col-md-6">
+      {{bookData.saleInfo.retailPrice.currencyCode}}
+    </div>
+
+    <div class="col-md-6">
+      Buy-Link :
+    </div>
+    <div class="col-md-6">
+      {{bookData.saleInfo.buyLink}}
+    </div>
+    
+  </div>
+</div>

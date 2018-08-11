@@ -1,0 +1,23 @@
+.search{
+    width:300px;
+}
+.para{
+    background:black;
+    color:orange;
+    font-size:25px;
+    padding:3%;
+    text-align: center;
+    font-weight: bold;
+}
+.head{
+    color:orange;
+}
+.menu{
+    margin-bottom:2%;
+    font-size:20px;
+    text-align:center;
+}
+.menu:hover{
+    cursor: pointer;
+    background: gainsboro;
+}
